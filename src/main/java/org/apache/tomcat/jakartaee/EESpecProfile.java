@@ -30,8 +30,17 @@ public interface EESpecProfile {
      * @return the converted name
      */
     default String convert(String name) {
+        boolean expressionFactory = name != null && name.contains("ExpressionFactory");
+        if (expressionFactory){
+            System.out.println("转换前：" + name);
+        }
         Matcher m = getPattern().matcher(name);
-        return m.replaceAll(getTarget() + "$1");
+        String result = m.replaceAll(getTarget() + "$1");
+        if (expressionFactory){
+            System.out.println("转换后：" + result);
+        }
+        return result;
+
     }
 
     /**
