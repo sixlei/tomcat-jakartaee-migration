@@ -24,7 +24,7 @@
     <version>33</version>
   </parent>
 
-  <groupId>org.apache.tomcat</groupId>
+  <groupId>com.fingard.luna.framework</groupId>
   <artifactId>jakartaee-migration</artifactId>
   <version>1.0.10-SNAPSHOT</version>
   <name>Apache Tomcat Migration Tool for Jakarta EE</name>
